@@ -11,7 +11,8 @@ This contains pre-trained, `sklearn` model that has been trained to predict hous
 
 ## Setup the Environment
 
-* Create a virtualenv with Python 3.7 and activate it. Refer to this link for help on specifying the Python version in the virtualenv. 
+* Create a virtualenv with Python 3.7 and activate it.
+
 ```bash
 python3 -m pip install --user virtualenv
 # You should have Python 3.7 available in your host. 
@@ -26,14 +27,16 @@ source .devops/bin/activate
 
 1. Standalone:  `python app.py`
 2. To Run in Docker:  `./run_docker.sh` ---> This contains scripts and command used to build the docker image and run as a container
+3. The `./upload_docker.sh` script authenticates with docker, tags the image built locally and pushes to docker 
+4. Open a new terminal, then run  `./make_prediction.sh` to generate predictions for house pricing
 
 
 ### Running in Kubernetes
 
 * Install Docker Desktop and start Docker Desktop, Another option would be to use Rancher Desktop
 * Setup and Configure Kubernetes locally by installing Minikube, Rancher can be used to start a local k8s cluster
-* Create Flask app in Container
-* Run via kubectl
+* Run minikube start to start a local kubernetes cluster
+* Run `./run_kubernetes.sh` to create a deployment from the docker image and forwards container ports to the host
+* Use  kubectl to interact with the cluster to get information about pods and logs
+* Run  `./make_prediction.sh` to generate predictions for house pricing
 
-
-3. Run in Kubernetes:  `./run_kubernetes.sh`
