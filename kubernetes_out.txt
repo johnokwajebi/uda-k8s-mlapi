@@ -1,0 +1,5 @@
+NAME                             READY   STATUS    RESTARTS   AGE
+predictionapi-7cddcdd464-fwxmv   1/1     Running   0          32m
+Forwarding from 0.0.0.0:8000 -> 80
+
+Handling connection for 8000
