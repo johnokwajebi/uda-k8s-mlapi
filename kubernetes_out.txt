@@ -14,7 +14,7 @@ Port: 8000
   ]
 }
 
-
+### Output from running kubectl logs <pod_name> ###
 [2022-07-27 14:54:36,170] INFO in app: JSON payload:
 {'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
 [2022-07-27 14:54:36,192] INFO in app: Inference payload DataFrame:
